@@ -6,4 +6,4 @@ def calc(num1: int|float,num2: int|float,op: str):
     elif op=="mult":
         return num1*num2
     elif op=="div":
-        return num1/num2
+        return num1/num2 if num2!=0 else None
