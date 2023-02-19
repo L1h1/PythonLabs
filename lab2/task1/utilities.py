@@ -23,7 +23,8 @@ def average_sentence_len(text:str):
 
 
 def average_word_len(text:str):
-    pass
+    word_lengths=[len(element) for element in re.split(r"[.!? \|/;:-=+*#$%']",text) if re.match(r"\w*[a-zA-z]\w*",element) and len(element.split())]
+    return 0 if not len(word_lengths) else sum(word_lengths)/len(word_lengths)
 
 
 def top_k_n_grams(text:str,k=10, n=4):
