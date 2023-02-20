@@ -3,6 +3,7 @@ SUB='sub'
 DIV='div'
 MULT='mult'
 
+
 def calc(num1: int|float,num2: int|float,op: str):
     if op==SUM:
         return num1+num2
