@@ -4,9 +4,9 @@ class Storage:
     cur_user = None
     
     
-    def add(self, *key_args):
+    def add(self, key_args):
         pass
-    
+        
     
     def remove(self, key):
         pass
@@ -20,7 +20,7 @@ class Storage:
         pass
 
 
-    def grep(self, filter):
+    def grep(self, filter:str):
         pass
 
 
