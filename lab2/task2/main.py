@@ -21,7 +21,7 @@ def program_loop(st:Storage):
     usr_name=input("Enter username: ")
     st.switch(usr_name)
     
-    
+
     while(True):
         usr_input=input(command_promt_template)
         command_input=usr_input.split()[0]
@@ -57,11 +57,6 @@ def program_loop(st:Storage):
 
 def main():
     program_loop(Storage())
-
-
-
-
-
 
 
 if __name__ =="__main__":
