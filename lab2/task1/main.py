@@ -14,7 +14,7 @@ def main():
     operation_case=int(input(task_template))
     match operation_case:
         case 1:
-           print(sentences_amount(user_input_text))
+            print(sentences_amount(user_input_text))
         case 2:
             print(non_declarative_sentences_amount(user_input_text))
         case 3:
@@ -25,6 +25,7 @@ def main():
             k = int(input("Enter k: 0 - set default"))
             n = int(input("Enter n: 0 - set default"))
             print(top_k_n_grams(user_input_text,k,n))
+
 
 if __name__=="__main__":
     main()
