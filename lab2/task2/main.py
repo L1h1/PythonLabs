@@ -32,7 +32,7 @@ def program_loop(st:Storage):
             case commands.REMOVE:
                 st.remove(args[0])
             case commands.FIND:
-                st.find(args[0])
+                st.find(args)
             case commands.LIST:
                 st.lst()
             case commands.GREP:
@@ -42,14 +42,9 @@ def program_loop(st:Storage):
             case commands.LOAD:
                 st.load()
             case commands.SWITCH:
-                sub_input=input("save current container (y/n)?: ")
-                if sub_input=="y":
-                    st.save()
-                sub_input=input("enter username: ")
-                st.switch(sub_input)
+                st.switch(args[0])
             case commands.QUIT:
-                sub_input=input("save current container (y/n)?: ")
-                if sub_input=="y":
+                if input("save current container (y/n)?: ")=="y":
                     st.save()
                 break
 
