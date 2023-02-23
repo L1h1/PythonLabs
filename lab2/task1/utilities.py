@@ -30,7 +30,7 @@ def average_word_len(text:str):
 
 
 def top_k_n_grams(text:str,k=10, n=4):
-    k, n = k, n if k > 0 and n > 0 else 10, 4
+    (k,n)= (k,n) if k>0 and n>0 else (10,4)
     ngram_dict = {} # key: ngram, value: count
     words = tuple(re.split(r"[.!? \|/;:-=+*#$%']",text))
     if(len(words)<n):
@@ -40,7 +40,8 @@ def top_k_n_grams(text:str,k=10, n=4):
         ngram = words[i:i+n]
         ngram_dict[ngram] = ngram_dict[ngram] + 1 if ngram in ngram_dict.keys() else 1
 
-    result = sorted(ngram_dict.items(), key=lambda pair: pair[1] reverse=True)
+    result = sorted(ngram_dict.items(), key=lambda pair: pair[1], reverse=True)
     return result[:k]    
+
 
 
