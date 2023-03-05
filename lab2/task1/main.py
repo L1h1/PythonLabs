@@ -22,8 +22,8 @@ def main():
         case 4:
             print(average_word_len(user_input_text))
         case 5:
-            k = int(input("Enter k: 0 - set default"))
-            n = int(input("Enter n: 0 - set default"))
+            k = int(input("Enter k: 0 - set default "))
+            n = int(input("Enter n: 0 - set default "))
             print(top_k_n_grams(user_input_text,k,n))
 
 
